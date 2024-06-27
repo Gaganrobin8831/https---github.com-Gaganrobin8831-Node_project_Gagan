@@ -1,0 +1,37 @@
+
+<form action="/feed_form" method="post">
+<div class="container-fluid feedback_conatiner ">
+     <h1>Feedback</h1>
+    <div class="row feedback_row">
+
+    <div class="col-md-6 feedback_col">
+        
+        
+  <label for="formGroupExampleInput" class="form-label">Name</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" name="feedname">
+
+  <label for="formGroupExampleInput1" class="form-label">Phone number</label>
+  <input type="text" class="form-control" id="formGroupExampleInput1" name="feedphno">
+
+  <label for="formGroupExampleInput2" class="form-label">Gmail</label>
+  <input type="mail" class="form-control" id="formGroupExampleInput2" name="feedmail">
+
+<label for="textarea">Feedback</label>
+<textarea name="text_area" id="textarea"></textarea>
+
+    </div>
+
+
+
+
+{{!-- image part --}}
+
+    <div class="col-md-6 feedback_col">
+        <img src="/images/goa.jpeg" alt="" srcset="">
+    </div>
+    
+</div>
+
+    <div class="col-md-6 colfedbackbtn"><button class="Btn">Submit</button></div>
+</div>
+</form>

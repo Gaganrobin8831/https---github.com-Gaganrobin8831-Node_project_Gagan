@@ -1,0 +1,35 @@
+<!-- tour_gallery.hbs -->
+<div class="tour-section">
+  <h1>Tour Gallery</h1>
+</div>
+
+<div class="slide-container swiper">
+  <div class="Tour_slide-content">
+    <div class="card-wrapper swiper-wrapper">
+      {{#each tours}}
+      <div class="card swiper-slide">
+        <div class="image-content">
+          <span class="overlay tour_overlay"></span>
+          <div class="card-image">
+            <img src="images/{{this.image}}" alt="{{this.tour_name}}" class="card-img">
+          </div>
+        </div>
+        <form action="/booking_detail" method="get">
+        <div class="card-content">
+          <input type="hidden" value="{{this.tour_id}}" name="Item_id">
+          <h2 class="aboutfirstperson tourperson">{{this.tour_name}}</h2>
+          <p class="description">Destination: {{this.destination}}</p>
+          <p class="description">Duration: {{this.duration}}</p>
+          <p class="description">Package: {{this.package}}</p>
+          <p class="description" >Amount: {{this.amount}}</p>
+          <button class="button tourbtn">Book</button>
+        </div>
+      </div>
+      </form>
+      {{/each}}
+    </div>
+  </div>
+  <div class="swiper-button-next tourdetailnext"></div>
+  <div class="swiper-button-prev tourdetailprev"></div>
+  <div class="swiper-pagination tourdetailbtn"></div>
+</div>

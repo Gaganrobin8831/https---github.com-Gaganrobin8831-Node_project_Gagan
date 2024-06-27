@@ -1,0 +1,41 @@
+@mixin comman{
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin rowCenterEvely{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+}
+@mixin rowCentercenter{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content:center;
+}
+@mixin colCenterEvely{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+}
+@mixin colCenterstart{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: start;
+}
+@mixin colCenterspace-between{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+@mixin colCenterrevese{
+   display: flex;
+   flex-direction: column-reverse;
+   align-items: center;
+   justify-content: start;
+}

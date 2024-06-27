@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Detail</title>
+</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  {{!-- box icon --}}
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+  {{!-- style sheet --}}
+<link rel="stylesheet" href="stylesheets/style.css">
+  {{!--  --}}
+<body>
+    <form action="/booking" method="post">   
+    <div class="container-fluid bookingcontainer">
+       
+       {{!-- fafa icon and home link text --}}
+        <div class="bookingboxicon">      
+        <i class='bx bxs-left-arrow-circle bx-fade-left bx-lg  apiboxiconcolor' ></i>
+      <h1><a href="/main">Home</a></h1>
+      </div>
+    {{!-- ========================================= --}}
+       
+
+        <div class="row bookingrow">
+            {{!-- headtext --}}
+         <div class="col-md-12  text-center"><h1>Tour Booking Details</h1></div>
+        {{!-- ============================ --}}
+         
+         {{!-- form --}}
+        
+
+        
+        <div class="row g-3 bookingform"> <!-- Start new row here -->
+       
+<div class="col-md-12">
+            
+            <div class="col-md-6">
+                <label for="inputname1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="inputname1" name="name">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputEmail2" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail2" name="mail">
+            </div>
+
+</div> 
+
+
+<div class="col-md-12">
+
+            <div class="col-md-6">
+                <label for="inputPhonno3" class="form-label">Phone no</label>
+                <input type="text" class="form-control" id="inputPhonno3" name="phno">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputamount4" class="form-label">Amount</label>
+                <input type="text" class="form-control" id="inputamount4" name="price" value="{{tours_detail.amount}}">
+            </div>
+
+</div>
+
+
+<div class="col-md-12">
+<input type="hidden" value="{{tours_detail.tour_id}}" name="Item_id">
+            <div class="col-md-6">
+                <label for="inputPerson5" class="form-label">No of Person</label>
+                <input type="text" class="form-control" id="inputPerson5" name="noofperson" oninput="myfun()">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputtname6" class="form-label">Tour Destination</label>
+                <input type="text" class="form-control" id="inputtname6" name="tdestination" value="{{tours_detail.destination}}">
+            </div>
+
+</div>
+
+
+
+<div class="col-md-12 mt-5 text-center">
+    <button  type="submit" class="btn btn-danger fw-bold">Submit</button>
+</div>
+ 
+        </div> <!-- Close row -->
+        {{!-- ============================================== --}}
+        </div>
+    </div>
+
+</form> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+<script>
+     
+  let fixedprice;
+    window.onload = function() {
+        // Initialize fixedprice when the page loads
+    fixedprice = parseFloat(document.getElementById('inputamount4').value);
+    console.log(fixedprice);
+        myfun();
+    }
+
+
+
+    function myfun() {
+        // Retrieve the number of persons
+        let personInput = document.getElementById('inputPerson5').value;
+        console.log("Person Input:", personInput); // Debug statement
+        
+        let person = parseInt(personInput);
+        console.log("Parsed Person:", person); // Debug statement
+        
+        // Retrieve the fixed price from the input field
+       // fixedprice = parseFloat(document.getElementById('inputamount4').value);
+        //console.log("Fixed Price:", fixedprice); // Debug statement
+        
+        // Check if person is a valid number
+        if (isNaN(person)) {
+            console.log("Invalid number of persons entered.");
+            return;
+        }
+        
+        // Calculate the total amount
+        let total = parseFloat(fixedprice) * person;
+        console.log("Total:", total); // Debug statement
+        
+        // Update the value of inputamount4
+        document.getElementById('inputamount4').value = total;
+    }
+</script>

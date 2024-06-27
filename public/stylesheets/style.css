@@ -1,0 +1,636 @@
+/* Primary Colors */
+/* Secondary Colors */
+/* Accent Colors */
+/* Background Colors */
+/* Text Colors */
+/* Border Colors */
+body {
+  overflow-x: hidden; }
+
+#homepage {
+  height: 100vh;
+  /* Set section height to 100% of the viewport height */
+  display: flex;
+  /* Use flexbox layout */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */ }
+
+/* Ensure slider takes up full width and height */
+#homepage > #slider {
+  flex: 1;
+  /* Distribute remaining space equally among child elements */
+  width: 100%;
+  /* Make sure slider takes up full width */
+  height: 100vh;
+  /* Make sure slider takes up full height */ }
+
+#About {
+  height: 100vh;
+  width: 100%; }
+
+#Gallery {
+  height: 100vh;
+  width: 100%; }
+
+#Feedback {
+  height: 100vh;
+  width: 100%;
+  background-color: goldenrod; }
+
+.navbar {
+  box-shadow: 2px 2px 2px 2px black;
+  background: #62eef6;
+  background: linear-gradient(294deg, rgba(98, 238, 246, 0.225427) 0%, rgba(168, 199, 202, 0.673606) 50%, rgba(62, 221, 246, 0.23383) 100%);
+  border-radius: 20px;
+  width: 80%;
+  margin-top: 1vw;
+  margin-left: calc(50% - 40%); }
+
+.navbar-collapse ul li a {
+  color: #000000;
+  font-weight: bold; }
+
+.navbar-collapse ul {
+  margin-right: 1vw; }
+  .navbar-collapse ul li {
+    color: #000000;
+    position: relative; }
+    .navbar-collapse ul li a::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0%;
+      height: 2px;
+      background-color: #ff0000;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s; }
+
+ul li a:hover::after {
+  width: 100%;
+  left: 0%;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s; }
+
+.carousel-item img {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover; }
+
+.about-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .about-section h1 {
+    font-size: 4vw;
+    color: var(--bs-primary);
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 6px -5px  black; }
+
+.card-wrapper {
+  margin-top: 2vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden; }
+
+.card {
+  height: 60vh;
+  box-shadow: 2px 2px 2px 2px black;
+  margin-bottom: 2vw; }
+  .card .card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px; }
+    .card .card-image .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%; }
+  .card .image-content {
+    position: relative; }
+  .card .image-content,
+  .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px; }
+  .card .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bs-primary); }
+
+.aboutfirstperson {
+  font-size: 18px;
+  font-weight: 500;
+  color: blue; }
+
+.description {
+  font-size: 14px;
+  color: #707070;
+  text-align: center; }
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 6px;
+  background-color: var(--bs-blue);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+
+.button:hover {
+  background-color: var(--bs-indigo); }
+
+.swiper-pagination,
+.swiper-button-next,
+.swiper-button-prev {
+  display: none; }
+
+.apicontainer {
+  height: 100vh; }
+  .apicontainer .apiboxicon {
+    display: flex;
+    flex-direction: row; }
+    .apicontainer .apiboxicon .apiboxiconcolor {
+      color: #ffa500; }
+    .apicontainer .apiboxicon h1 a {
+      text-decoration: none; }
+  .apicontainer .titlerow {
+    height: 20vh;
+    margin: auto; }
+    .apicontainer .titlerow .title-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; }
+      .apicontainer .titlerow .title-col h1 {
+        font-size: 5vw;
+        font-weight: bolder;
+        color: #00008b;
+        font-family: Georgia, 'Times New Roman', Times, serif; }
+  .apicontainer .apirow {
+    margin-top: 2vw; }
+    .apicontainer .apirow .apicoldetail1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; }
+      .apicontainer .apirow .apicoldetail1 .api-image {
+        height: 60vh;
+        width: 400px;
+        box-shadow: 2px 2px 2px 2px #808080; }
+    .apicontainer .apirow .apicoldetail2 {
+      text-align: center;
+      height: 70vh; }
+      .apicontainer .apirow .apicoldetail2 h2 {
+        font-size: 3vw; }
+
+.tour-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .tour-section h1 {
+    font-size: 4vw;
+    color: goldenrod;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 6px 5px  gray; }
+
+.tourdetailnext,
+.tourdetailprev,
+.tourdetailbtn {
+  display: block;
+  color: goldenrod; }
+
+.swiper .card .tour_overlay {
+  background-color: goldenrod; }
+
+.swiper .card .tourperson {
+  color: goldenrod; }
+
+.swiper .card .tourbtn {
+  background-color: goldenrod; }
+
+.swiper .tourdetailbtn {
+  margin-top: 2vw; }
+
+.feedback_conatiner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .feedback_conatiner h1 {
+    font-size: 4vw;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 10px 5px  black; }
+  .feedback_conatiner .feedback_row {
+    height: 70vh;
+    width: 80%; }
+    .feedback_conatiner .feedback_row .feedback_col {
+      margin-top: 5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      font-size: larger;
+      font-weight: bold;
+      color: #ffffff; }
+      .feedback_conatiner .feedback_row .feedback_col img {
+        margin-left: 5vw;
+        height: 57vh;
+        width: 70%;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px 2px gray; }
+      .feedback_conatiner .feedback_row .feedback_col textarea {
+        width: 100%;
+        height: 27vh; }
+  .feedback_conatiner .colfedbackbtn {
+    width: 10%;
+    height: 10vh;
+    margin-left: -38vw; }
+    .feedback_conatiner .colfedbackbtn .Btn {
+      width: 90%;
+      background-color: transparent;
+      outline: 3px solid black; }
+    .feedback_conatiner .colfedbackbtn .Btn:hover {
+      width: 90%;
+      color: #ffffff;
+      background-color: #000000;
+      outline: 1px solid white; }
+
+.thanksfeedcontainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
+  .thanksfeedcontainer .Feedthanksrow {
+    height: 50vh;
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .thanksfeedcontainer .Feedthanksrow h1 {
+      font-size: 3vw; }
+    .thanksfeedcontainer .Feedthanksrow button {
+      height: 4vh;
+      width: 7rem;
+      position: relative;
+      outline: 2px solid;
+      background-color: transparent;
+      border-radius: 10px; }
+      .thanksfeedcontainer .Feedthanksrow button a {
+        z-index: 999;
+        text-decoration: none; }
+    .thanksfeedcontainer .Feedthanksrow button::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      right: 100%;
+      width: 0%;
+      height: 4vh;
+      z-index: -1;
+      background-color: #ff0000;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.7s;
+      border-radius: 10px; }
+    .thanksfeedcontainer .Feedthanksrow button:hover::after {
+      position: absolute;
+      width: 100%;
+      right: 0%;
+      border-radius: 10px;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.7s; }
+
+.bookingcontainer {
+  height: 100vh;
+  background-image: url(/images/jodhpur.jpg);
+  background-size: 100% 100%;
+  overflow: hidden; }
+  .bookingcontainer .bookingboxicon {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+    .bookingcontainer .bookingboxicon .apiboxiconcolor {
+      color: #da430a; }
+    .bookingcontainer .bookingboxicon h1 a {
+      color: #da430a;
+      text-decoration: none; }
+  .bookingcontainer .bookingrow {
+    height: 80vh;
+    width: 60%;
+    margin: 0 auto;
+    /* This centers the element horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .bookingcontainer .bookingrow .col-md-12 h1 {
+      font-size: 4vw;
+      color: #000000;
+      text-shadow: 2px 2px; }
+    .bookingcontainer .bookingrow .bookingform {
+      height: 50vh;
+      width: 100%;
+      margin-bottom: 4vw;
+      box-shadow: 20px 20px 20px 20px black;
+      background: #62eef6;
+      background: linear-gradient(294deg, rgba(98, 238, 246, 0.225427) 0%, rgba(168, 199, 202, 0.673606) 50%, rgba(62, 221, 246, 0.23383) 100%);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start; }
+      .bookingcontainer .bookingrow .bookingform .col-md-12 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly; }
+        .bookingcontainer .bookingrow .bookingform .col-md-12 .col-md-6 {
+          margin-left: 2vw;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+          font-weight: bold;
+          color: #ff0000;
+          font-size: 1.2vw;
+          text-shadow: 2px 2px black; }
+          .bookingcontainer .bookingrow .bookingform .col-md-12 .col-md-6 input {
+            width: 70%; }
+
+/* Media query for screens with a maximum width of 600px */
+@media only screen and (max-width: 990px) {
+  .carousel-inner {
+    display: block;
+    /* Example of common style */
+    /* Add more common styles as needed */ }
+  .d-block {
+    display: block;
+    /* Example of common style */
+    /* Add more common styles as needed */ }
+  #homepage {
+    height: 100vh;
+    /* Reset height to allow content to determine height */
+    display: block;
+    /* Revert to default display mode */ }
+  /* Adjust slider styles for smaller screens */
+  #homepage > #slider {
+    height: 100vh;
+    /* Reset height to allow content to determine height */
+    /* Add additional styles as needed for smaller screens */ }
+  .carousel-inner {
+    height: 100vh;
+    position: relative; }
+    .carousel-inner .carousel-item img {
+      position: absolute;
+      width: cover;
+      /* Reset width to allow image to resize based on its original dimensions */
+      height: 80vh;
+      /* Reset height to allow image to resize based on its original dimensions */ }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; }
+    ul li {
+      font-weight: 900;
+      font-size: large; }
+      ul li a:hover::after {
+        width: 100%;
+        left: 0%;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s; }
+  .navinput,
+  .navinputbtn {
+    display: none; }
+  .swiper {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* Swiper Navigation Buttons Styles */ }
+    .swiper .card {
+      height: 50vh;
+      width: 40%;
+      border-radius: 20px;
+      box-shadow: 2px 2px 2px 2px black; }
+      .swiper .card .card-image {
+        position: relative;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .swiper .card .card-image .card-img {
+          height: 90%;
+          width: 90%;
+          object-fit: cover;
+          border-radius: 50%; }
+      .swiper .card .image-content,
+      .swiper .card .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+      .swiper .card .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #265DF2; }
+    .swiper .image-content {
+      position: relative; }
+    .swiper .aboutfirstperson {
+      margin-top: 2vw;
+      font-size: 14px;
+      font-weight: 500;
+      color: blue; }
+    .swiper .description {
+      font-size: 11px;
+      color: #000000;
+      text-align: center; }
+    .swiper .card-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    .swiper .button {
+      border: none;
+      font-size: 16px;
+      color: #FFF;
+      padding: 8px 6px;
+      background-color: #4070F4;
+      border-radius: 6px;
+      margin-top: -1vw;
+      cursor: pointer;
+      transition: all 0.3s ease; }
+    .swiper .button:hover {
+      background-color: #265DF2; }
+    .swiper .swiper-pagination {
+      display: flex;
+      /* Use flexbox */
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+      /* Center vertically */
+      position: absolute;
+      color: #265DF2;
+      /* Text color */
+      height: 10vh;
+      width: 100%;
+      bottom: 10px;
+      /* Adjust position from the bottom as needed */ }
+    .swiper .swiper-pagination-bullet {
+      display: block;
+      height: 2vw;
+      color: #0000ff;
+      /* Assuming $primary-blue is defined elsewhere */ }
+    .swiper .swiper-button-next,
+    .swiper .swiper-button-prev {
+      display: block;
+      position: absolute;
+      color: #0000ff;
+      /* Adjust background color and opacity */
+      cursor: pointer;
+      z-index: 999;
+      /* Ensure buttons are above other content */
+      transition: background-color 0.3s ease;
+      /* Add transition effect */ }
+    .swiper .swiper-button-next:hover,
+    .swiper .swiper-button-prev:hover {
+      color: #00ffff;
+      /* Adjust hover background color and opacity */ }
+    .swiper .swiper-button-next {
+      right: 20px;
+      /* Adjust distance from right edge */ }
+    .swiper .swiper-button-prev {
+      left: 20px;
+      /* Adjust distance from left edge */ }
+  .apicontainer .apirow .apicoldetail2 {
+    margin-top: 2vw;
+    overflow: scroll; }
+    .apicontainer .apirow .apicoldetail2 h2 {
+      color: #0000ff;
+      font-size: larger; }
+  .swiper .card-wrapper {
+    width: 500px; }
+    .swiper .card-wrapper .card {
+      width: 350px; }
+      .swiper .card-wrapper .card .tour_overlay {
+        display: block;
+        background-color: goldenrod; }
+      .swiper .card-wrapper .card .card-content .tourperson {
+        display: block;
+        color: goldenrod; }
+      .swiper .card-wrapper .card .card-content .tourbtn {
+        display: block;
+        background-color: goldenrod; }
+  .swiper .tourdetailnext,
+  .swiper .tourdetailprev,
+  .swiper .tourdetailbtn {
+    display: block;
+    color: goldenrod; }
+  .swiper .swiper-pagination {
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    position: absolute;
+    color: #265DF2;
+    /* Text color */
+    height: 10vh;
+    width: 100%;
+    bottom: 10px;
+    /* Adjust position from the bottom as needed */ }
+  .swiper .swiper-pagination-bullet {
+    display: block;
+    height: 2vw;
+    color: #0000ff;
+    /* Assuming $primary-blue is defined elsewhere */ }
+  .feedback_conatiner {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .feedback_conatiner h1 {
+      margin-top: 3rem;
+      font-size: 5vw;
+      color: #ffffff;
+      font-weight: 600;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-shadow: 10px 5px  black; }
+    .feedback_conatiner .feedback_row {
+      margin-top: -2vw;
+      height: 90vh;
+      width: 80%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: start; }
+      .feedback_conatiner .feedback_row .feedback_col {
+        margin-top: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        font-size: larger;
+        font-weight: bold;
+        color: #ffffff; }
+        .feedback_conatiner .feedback_row .feedback_col img {
+          margin-left: 5vw;
+          height: 26vh;
+          width: 98%;
+          border-radius: 20px;
+          margin-left: -1vw;
+          box-shadow: 2px 2px 2px 2px gray; }
+        .feedback_conatiner .feedback_row .feedback_col textarea {
+          width: 100%;
+          height: 10vh; }
+    .feedback_conatiner .colfedbackbtn {
+      width: 30%;
+      height: 10vh;
+      margin-left: -6vw;
+      margin-top: 3vw; }
+      .feedback_conatiner .colfedbackbtn .Btn {
+        width: 100%;
+        background-color: transparent;
+        outline: 3px solid black; }
+      .feedback_conatiner .colfedbackbtn .Btn:hover {
+        width: 100%;
+        color: #ffffff;
+        background-color: #000000;
+        outline: 1px solid white; } }

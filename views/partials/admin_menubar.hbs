@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+<style>
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+/* body
+{
+  font-family: 'Oswald', sans-serif;
+  overflow: hidden;
+  color: #4242424A;
+} */
+html::-webkit-scrollbar{
+width:10px;
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 249px;
+  background-color: red;
+  /* border-bottom: 1px solid #dbdbdb; */
+}
+header ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 30px;
+}
+header ul li:last-child{
+  margin-right:0;
+}
+header ul li a{
+  text-decoration: none;
+  color: #42424a;
+  padding: 22px 0;
+  display: inline-block;
+  transition: all ease 0.3s;
+  font-size: 18px;
+}
+header ul li a:hover{
+  color: #ff8a00;
+}
+/*submenu style*/
+header ul .submenu{
+  position: absolute;
+  width: 200px;
+  background-color: white;
+  box-shadow: 0 20px 45px black;
+  margin-top: -50px;
+  opacity: 0;
+  z-index: -999;
+  transition: all ease 0.9s;
+}
+header ul li:hover .submenu{
+  z-index: 99;
+  opacity: 1;
+  margin-top: 0;
+}
+header ul .submenu li{
+  margin: 0;
+  width: 100%;
+}
+header ul .submenu li a{
+  padding: 15px 20px;
+  display: inline-block;
+width: 100%;
+}
+
+
+</style>
+<body>
+    
+   <header>
+    <div class="logo">
+      <a href=""></a>
+    </div>
+    <nav>
+      <ul>
+      
+        <li><a href="">Add Detail</a>
+          <ul class="submenu">
+          <li><a href="/AddTour">Add Tour</a></li>
+          
+            {{!-- <li><a href="">Add Hotel</a></li> --}}
+           
+          </ul>
+        </li>
+        <li><a href="">Edit Detail</a>
+          <ul class="submenu">
+            <li><a href="/Edit_Tour">Edit Tour </a></li>
+          
+            
+          </ul>
+        </li>
+        <li><a href="">Check Booking Detail</a>
+          <ul class="submenu">
+          <li><a href="/Check_tour_booking">Check Tour Booking</a></li>
+            <li><a href="/payment_check">Check Payment</a></li>
+             
+          </ul>
+        </li>
+        <li><a href="">Check Request</a>
+          <ul class="submenu">
+          <li><a href="/mydatafeed">Check Feedback</a></li>
+            </ul>
+        </li>
+        <li><a href="">logout</a>
+          <ul class="submenu">
+       
+            <li><a href="/logout">Logout</a></li> </ul> 
+          </ul>
+        </li>
+      </ul>
+    </nav>
+   </header>
+  
+
+
+
+
+
+
+
+
+  <!-- <header>
+  <div class="logo">
+    <a href="#"></a>
+  </div>
+    <nav>
+      
+        <ul >
+        <li><a href="admin.php">Admin</a></li>
+          <li>
+            <a href="#" >Add Detail</a>
+            
+            <ul class="submenu">
+           
+            </ul>
+          </li>
+          <li>
+            <a href="#" >Edit Detail</a>
+          
+            <ul class="submenu">
+           </ul>
+              </li>
+           
+          
+              
+
+              <li>
+            <a href="#" >Check Booking Detail</a>
+            
+            <ul class="submenu">
+             </li>
+
+              <li>
+            <a href="#" ></a>
+           <ul class="submenu">
+            </ul>
+             </li>
+
+
+
+             <li>
+            <a href="#" >Setting</a>
+            
+            <ul class="submenu">
+            
+             </li>
+
+
+        </ul>
+     
+     
+    </nav>
+
+  
+   -->
+<!-- php -->
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+       .bg-gray-100{
+        background-image: url(/public/images/payment.jpg);
+        background-size: 30% 30%;
+       }
+
+        /* Additional styles */
+        .shadow-custom {
+            box-shadow: 10px 10px 10px 20px black;
+        }
+
+        /* Custom width class */
+        .w-custom {
+            width: 50%; /* Adjust this value as needed */
+        }
+
+        /* Custom height class */
+        .h-custom {
+            height: 80vh; /* Adjust this value as needed */
+        }
+        .block{
+            text-shadow: 2px 2px black;
+        }
+        @media (min-width: 768px) {
+            /* For medium screens and above */
+            .w-md-custom {
+                width: 50%; /* Adjust this value as needed */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-transparent rounded-lg shadow-custom md:h-custom w-custom md:w-md-custom">
+
+         <!-- Payment text -->
+         <h2 class="text-center text-red-700 text-6xl font-bold py-4 block">Payment</h2>
+
+        <!-- Form inside the centered row -->
+        <form class="p-3" action="/pay" method="post">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- First input row -->
+                <input type="hidden" value="{{booking.booking_id}}" name="booking_id">
+
+                <div>
+                    <label for="name" class="block text-red-700 text-lg font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="day" class="block  text-red-700 text-lg font-bold mb-2">Email</label>
+                    <input type="date" id="day" name="date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <!-- Second input row -->
+                <div>
+                    <label for="cvvpart" class="block  text-red-700 text-lg font-bold mb-2">Cvv</label>
+                    <input type="text" id="cvvpart" name="Cvv" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="cardnum" class="block  text-red-700 text-lg font-bold mb-2">Card number</label>
+                    <input type="text" id="cardnum" name="card_num" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="Amount" class="block text-red-700 text-lg font-bold mb-2">Amount</label>
+                    <input type="text" id="Amount" value="{{booking.amount}}" name="price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div>
+                    <label for="cardtype" class="block  text-red-700 text-lg font-bold mb-2">Cardtype</label>
+                    <input type="text" id="cardtype" name="card_type" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+            <!-- Submit button -->
+            <div class="flex justify-center mt-6">
+                <button type="submit"  class="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-red focus:shadow-outline" type="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
